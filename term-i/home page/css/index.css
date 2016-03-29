@@ -8,7 +8,7 @@ body{
 .wrapper{
 	width: 1920px;
 	height: 900px;
-	background-image: url(../img/beijing.png);
+	background-image: url(../img/beijing.jpg);
 	position: relative;
 	left: 50%;
 	margin-left: -960px;
