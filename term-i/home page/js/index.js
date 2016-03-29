@@ -1,6 +1,6 @@
 $(function(){
 	function slider(){
-		$(".zimu").animate({"margin-top":"313px"},{duration: 2000, easing: "easeOutBounce"});
+		$(".zimu").animate({"margin-top":"18%"},{duration: 2000, easing: "easeOutBounce"});
 	}
 	window.onload=slider;
 	$(".buttom2").hide();
@@ -12,4 +12,7 @@ $(function(){
 		$(".buttom1").fadeIn(500);
 		$(".buttom2").hide();
 	});
+	var $winWidth=$(window).width();
+	var $winHeight=$(window).height();
+	$(".wrapper").height($winHeight);
 })
