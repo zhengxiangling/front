@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>group的应用</title>
+		<style type="text/css">
+			/*.container{
+				overflow: auto;
+			}*/
+			.mian{
+				width: 200px;
+				height: 200px;
+				background-color: #65B86B;
+				float: left;
+			}
+			.group:before,
+			.group:after{
+				content: "";
+				display: table;
+			}
+			.group:after{
+				clear: both;
+			}
+			.group{
+				*zoom:1;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="mian"></div>
+			<div class="group"></div>
+		</div>
+	</body>
+</html>
