@@ -29,11 +29,15 @@
 	background-image: url(../imges/sheji2.png);
 	cursor:pointer;
 }
-.sheji>p{
+.sheji>.zi{
 	width: 100%;
-	font-size: 1.2em;
-	font-family: "微软雅黑";
+	display: block;
 	margin-top: 16.7%;
+}
+.sheji>.zi>p{
+	width: 80%;
+	font-size: 1.3vw;
+	font-family: "微软雅黑";
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -57,11 +61,15 @@
 	background-image: url(../imges/wangluo2.png);
 	cursor:pointer;
 }
-.wangluo>p{
+.wangluo>.zi{
 	width: 100%;
-	font-size: 1.2em;
-	font-family: "微软雅黑";
+	display: block;
 	margin-top: 16.7%;
+}
+.wangluo>.zi>p{
+	width: 80%;
+	font-size: 1.3vw;
+	font-family: "微软雅黑";
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -85,11 +93,15 @@
 	background-image: url(../imges/yanfa2.png);
 	cursor:pointer;
 }
-.yanfa>p{
+.yanfa>.zi{
 	width: 100%;
-	font-size: 1.2em;
-	font-family: "微软雅黑";
+	display: block;
 	margin-top: 16.7%;
+}
+.yanfa>.zi>p{
+	width: 80%;
+	font-size: 1.3vw;
+	font-family: "微软雅黑";
 	margin-left: auto;
 	margin-right: auto;
 }
