@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>flexbox练习</title>
+		<style type="text/css">
+			.flex-container{
+				display: flex;
+				border: 1px solid #999;
+			}
+			.flex-item{
+				width: 150px;
+				margin: 20px;
+			}
+			.flex-item:nth-child(1){
+				height: 120px;
+				border: 1px;
+				border:1px solid #f00;
+			}
+			.flex-item:nth-child(2){
+				height: 100px;
+				border: 1px;
+				border:1px solid #f00;
+			}
+			.flex-item:nth-child(3){
+				height: 40px;
+				border: 1px;
+				border:1px solid #f00;
+			}
+			.flex-item:nth-child(4){
+				height: 200px;
+				border: 1px;
+				border:1px solid #0f0;
+			}
+			@media only screen and (min-width:640px ) {
+				.flex-container{
+					flex-direction: row;
+					justify-content: space-between;
+					align-items: center;
+				}
+			}
+			@media only screen and (max-width:639px) {
+				.flex-container{
+					flex-direction: row;
+					flex-wrap: wrap;
+					align-items: flex-start;
+				}
+				.flex-item:nth-child(4){
+					order: -1;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="flex-container">
+			<fiv class="flex-item"></fiv>
+			<fiv class="flex-item"></fiv>
+			<fiv class="flex-item"></fiv>
+			<fiv class="flex-item"></fiv>
+		</div>
+	</body>
+</html>
