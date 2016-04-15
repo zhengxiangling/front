@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	以下代码保证新标签在旧版浏览器（低于IE9的版本）上正确显示。
+	<!--[if lt IE 9]>
+		<script>
+			document.createElement("<header");
+		</script>
+		<style>
+			header{ display: block; }
+		</style>
+	<![endif]-->
+</head>
+<body>
+	<header>
+		header标签在语法规范中包含标题、标题介绍或标题导航。
+		header不允许嵌套，不允许出现在地址（address）或页脚（footer）内。
+		*注：header应在CSS中被定义成display:block;其他结构性元素(article、footer等)也应如此。
+			 这样可以保证不兼容新标签的浏览器也能正确显示这些元素。
+			 其他HTML5新元素的编码都已经有通过JavaScript库的实现方案。可见以下链接：
+			 <a href="http://code.google.com/p/html5shim/">HTML5shim</a>
+		<img src="" alt="h1元素内容" class="logo">
+		<hgroup>
+			超过两个以上的h标签不再允许直接书写，将使用hgroup组织起来。
+			hgroup的总体起始位置取决于首个标题出现的位置，一般只包含h1~h6标签。
+			<h1>Welcome to HTML5</h1>
+			h1元素在一个Web页面中原则上只能出现一次。
+			<h2>Excitement!</h2>
+		</hgroup>
+	</header>
+	<aside class="shadow">
+		*<h2>Link Block</h2>
+		aside元素作用于页面上一些与主题联系不大而相对独立的区域。
+		与article相对应：如果article是主干，则aside是分支。
+		<section>
+		section作用于同一主题下不同的文档部分，通常出现在附录、目录、许可协议等。
+		一般来说，有内容的表格中使用section也是允许的。
+			<h3>Questionnaire</h3>
+			<p>Will HTML5 be ready on time?</p>
+			<input type="radio" name="vote" value="1" checked> yes, definitely<br>
+			<input type="radio" name="vote" value="2"> probably later<br>
+			<input type="radio" name="vote" value="3"> never<br>
+			<input type="radio" name="vote" value="4"> don't care<br>
+		</section>
+		<section>
+			<h3>Login</h3>
+			<label>Username <input name="user" type="text" size="10"></label><br><br>
+			使用label将Username和后面的input包裹起来。以便区分。
+			<lable>Password <input name="pass" type="text" size="10"></lable>
+		</section>
+		<nav>
+		nav为导航。nav不可能出现在address内。
+		可以放在footer、header、aside甚至article等元素内，一般包括链接。
+			<h3>Quick Links</h3>
+			<ul>
+				<li><a href="about:blank">111</a></li>
+				<li><a href="about:blank">111</a></li>
+				<li><a href="about:blank">111</a></li>
+			</ul>
+		</nav>
+	</aside>
+	<div id="content" class="shadow">
+		<article>
+			article对应Web页面中的一个独立区域，该区域包括新闻、博客文章之类的内容。
+			如果article是相互嵌套的，原则上来说，内嵌article应该与外部article有着相同的主题样式。
+			article用到display: block; 使内容宽度被缩减到环绕div的79%。
+			<img src="" alt="h2元素内容">
+			<h2>DELL</h2>
+			<address>Samuel H, Library of GXU</address>
+			address包含联系信息（邮件地址、名字、公司、地址等相关信息），如果需要单独表达地址时用<p>。
+			address作用于与其最近的article元素，若没有article元素则作用于整个文档。
+			address默认为斜体显示。
+			<time pubdate="pubdate" datetime="2016-02-25T19:45:00Z">Thursday, February 25th 2016 @19:45:00</time>			
+			time根据其pubdate、datetime属性，共同形成文档的时间戳。
+			*注：time元素是方便供机器读取，而不是形成特殊的时间内容。
+				 Web页面显示的仍然time内自定义的内容。
+			<p>This is the first HTML5 website that I made.</p>
+			CSS中，p用到clear: both; 以消除img(float: left;)对其的影响。
+			<p><q>This is perfect!</q>Says Nick.</p>
+			引用部分用到q。英文引号标记"并非HTML语言的一部分。
+			但配合CSS伪元素:before和:after，浏览器仍能为q元素生成合适的样式。
+		</article>
+		<figure>
+		figure和figcaption不能算作结构性元素。
+		figure用于组织图片，figcaption则用于对这一组图片的描述。
+		每一个figure元素只能包括一个figcaption。
+		figcaption的位置在figure内是任意的。
+		但是在默认情况下，figcaption的大小与figure的大小一致。
+			<img src="img/3.png" alt="Circle1">
+			<img src="img/1.png" alt="Circle2">
+			<img src="img/2.png" alt="Circle3">
+			<figcaption>Bonne Nuit, The Monge!</figcaption>
+		</figure>
+		<p style="width:200px;">supercali<wbr>fragilistic<wbr>expialidocious</p>
+		<wbr>用于自动折行，让浏览器根据排版需要决定是否将单词换行显示。
+	</div>
+	<footer class="shadow">
+	footer包含了许多信息，诸如作者、其他相关页面（friendlink）、注意事项（版权、免责声明）等。
+		<p class="copyright">&copy; 2016 <mark>GXU</mark></p>
+		一般版权用<p>写。
+		mark用于高亮标记一段文字。
+		<nav>
+			*<h2>Navigation</h2>
+			<div>
+				<a href="about:blank" class="shadow">1</a>
+				<a href="about:blank" class="shadow">2</a>
+				<a href="about:blank" class="shadow">3</a>
+				<a href="about:blank" class="shadow">4</a>
+			</div>
+		</nav>
+	</footer>
+</body>
+</html>
+
+在aside和footer nav中都有一个隐藏的h2（*）。下面介绍大纲算法：
+HTML5大纲分析器会分析出下面的条目结构：
+1.Welcome to HTML5! 	(h1)
+	*1.Link Block		(h2)
+		1.Questionnare 	(h3)
+		2.Login 		(h3)
+		3.Quick Links 	(h3)
+	2.DELL 				(h2)
+	*3.Navigation 		(h2)
+
+由此，HTML5大纲分析器会按层次分析h标签内容。如果忽略Link Block和Navigation，
+则分析器会以Untitle Section替换。
+合理使用h1~h6标签，既可以保持结构完整，也可以使大纲清晰易读。
+要逐渐培养大纲思维，清晰划分Web页面结构。
+同时，需要注意的是，在使用hgroup时，大纲仅包含hgroup中的最高级别。
+目前还没有浏览器可以直接执行大纲算法，搜索引擎也没有改进机制。
+
+.shadow 是使用CSS3来编写的。但CSS3还没有进入候选推荐阶段。
+在使用时需要添加-moz-（对应firefox）和-webkit-（对应chrome）前缀，
+来对不同的浏览器提供兼容支持。
+
+wbr被称为空间元素，它没有结束标签。HTML5中还有14个元素也具有此特性：
+<area shape="" coords="" href="" alt="">
+<base href="">
+<br>
+<col>
+<command>
+<embed src="" type="">
+<hr>
+<img src="" alt="">
+<input type="text">
+<keygen>
+<link rel="stylesheet" href="">
+<meta>
+<param name="" value="">
+<source>
+空间元素可以在开始标签中包含一个反斜杠用于闭合，例<br />，这对于兼容XHTML5十分有用。
+
+避免<b></b>（加粗字体）和<i></i>（斜体）的出现，用<strong></strong>和<em></em>代替。
+strong（重要） 和 em（强调） ，对搜索爬虫友好。
+
+<p>Price: <s>$4.50</s> $2.00 </p>
+<s>划掉错误的文本（需要修正的文本）</s>
+
+<cite>Vingt Mille Lieues Sous Les Mers</cite>
+<cite>作品标题</cite>
+
+<small>*Original French Edition</small>
+<small>旁注</small>
+
+<q>引用</q>
+中英文引号可以用CSS伪类来规定。
+q:before{
+	content: '"';
+}
+q:after{
+	content: '"';
+}
+
+<dfn>举例</dfn>
+
+<abbr title="Chinese People's Liberation Army">CPLA</abbr> 缩写
+
+<code>fruitdb</code> 计算机代码
+
+<var></var> 变量
+
+<samp></samp> 计算机输出
+
+<kbd></kbd> 用户输入
+
+<sub></sub> 下标
+
+<sup></sup> 上标
+
+<bdi></bdi> 文本方向隔离
+
+<bdo dir=""></bdo> 文本方向格式
+
+<span lang="fr">Sirop de Sureau</span> 其他

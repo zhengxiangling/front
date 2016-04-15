@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>移动Web界面样式</title>
+</head>
+<body>
+    一、CSS3
+        1、增强的选择器
+            属性选择器，4种匹配模式：
+            ·完全匹配属性选择器：[id=article]{};
+            ·包含匹配选择器：[attribute*=value]{};
+            ·首字符匹配选择器：[attribute^=value]{};
+            ·尾字符匹配选择器：[attribute$=value]{};
+            例:
+            <div id="article">1</div>
+            <div id="subarticle">2</div>
+            <div id="article1">3</div>
+            <style type="text/css">
+                div[id=article]{ color: red; }     //只有1红色
+                div[id*=article]{ color: red; }    //1、2、3都红色  *=包含
+                div[id^=article]{ color: red; }    //1、3红色       ^=首字符
+                div[id$=article]{ color: red; }    //1、2红色       $=尾字符
+            </style>
+        2、伪类选择器
+            新增：first-line、first-letter、root、not、empty、target
+            ·before：主要的作用是在选择某个元素之前插入内容，一般用于清除浮动。（clearfix）
+                element:before{
+                    content:"插入内容"
+                }
+                ×与before配对的是after。
+            ·first-child：指定元素列表中第一个元素的样式。
+                li:first-child{ color: red; }
+                ×与first-child配对的是last-child。
+            ·nth-child和nth-last-child：指定某个元素列表从前或从后数起某个元素的样式。
+                li:nth-child(2){ color: red; }
+                li:nth-child(even) //指定偶数个（odd奇数个）
+        3、阴影
+            ·box-shadow: 2px 3px 4px #000;
+                2px水平偏移值 3px垂直偏移值 4px模糊值 颜色
+            ·text-shadow: 2px 3px 4px #f00;
+        4、背景
+            ·background-size: width height || cover || contain                      大小
+            ·background-clip: border-box || padding-box || content-box || no-clip   裁剪
+            ·background-origin: border || padding || content                        指定bgpos参考坐标的起始位置
+            ·background: url(bgpic1), url(bgpic2);
+            ·background: -webkit-gradient(linear|radial,0 0,0 100%,from(#fff),to(#000));
+                ×-webkit-gradient(<type>, <port>[, <radius>]?,<point> [, <radius>]?[, <stop>]*)
+        5、border-radius
+        6、Media Queries
+            ·viewport（视口）
+                <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+                自定义虚拟窗口，并制定虚拟窗口的宽度为device-width，初始缩放比例为1，不允许用户手动缩放。
+            ·css内部定义
+                @media screen and (max-width: 600px){
+                    .demo{ background-color: #ccc; }
+                }
+            ·link内定义
+                <link rel="stylesheet" href="style.css" media="screen and (max-width: 600px)">
+            ·orientation: portrait | landscape
+        7、not 和 only 
+</body>
+</html>
