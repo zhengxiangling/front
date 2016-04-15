@@ -3,12 +3,61 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>html5 study</title>
+		<script type="text/javascript">
+		// 暂时保存数据
+			function saveStorage1(id){
+				var msg = document.getElementById(id).value; 
+				sessionStorage.setItem("mess",msg); 
+			}
+			function loadStorage1(id){
+				var target = document.getElementById(id); 
+				var msg = sessionStorage.getItem("mess"); 
+				target.innerHTML = msg; 
+			}
+				// 永久保存数据	
+			function saveStorage2(id){
+				var msg = document.getElementById(id).value; 
+				localStorage.setItem("mess",msg); 
+			}
+			function loadStorage2(id){
+				var target = document.getElementById(id); 
+				var msg = localStorage.getItem("mess"); 
+				target.innerHTML = msg; 
+			}
+			// 拖动图片
+			function allowDrop(ev){
+				ev.preventDefault();
+				/*ev.DataTransfer.dropEffect='copy';*/
+			}
+			function drag(ev){
+				/*ev.effectAllowed = 'all';*/
+				ev.dataTransfer.setData("Text",ev.target.id);
+			}
+			
+			function drop(ev){
+				ev.preventDefault();
+				var data=ev.dataTransfer.getData("Text");
+				ev.target.appendChild(document.getElementById(data));
+			}
+		</script>
 		<style type="text/css">
 			/*为了能让旧版本的浏览器正确显示这些元素，
 			 * 你可以设置 CSS 的 display 属性值为 block:*/
 			header, section, footer, aside, nav, main, article, figure {
    				 display: block; 
 			}
+			#tucun{
+				width: 176px;
+				height: 174px;
+				border: 2px solid #d2d2d2;
+				box-shadow: 1px 1px 8px #646464;
+			}
+			#tutuo{
+				width: 176px;
+				height: 174px;
+				background: #e54d26;
+			}
+			
 			/*Internet Explorer 8 及更早 IE 版本的浏览器不支持以上的方式。
 			但可以添加 -- 国内用户请使用百度静态资源库
 			<!--[if lt IE 9]>
@@ -264,6 +313,68 @@ HTML5大纲分析器会分析出下面的条目结构：
             Week，年的周号选择器
             Month，月份选择器</p>
 				</section>
+		</article>
+		<article>
+			<h2>new function</h2>
+			<section>
+				<h3>progress rest</h3>
+				<progress max="100" value="60"></progress>
+			</section>
+			<section>
+				<h2>meter 元素演示</h2>
+				<meter value="50" max="100" min="0" low="60" high="80" optimum="60"></meter>
+				<meter value="50" max="100" min="0" low="60" high="80" optimum="49"></meter>
+				<meter value="50" max="100" min="0" low="60" high="80" optimum="81"></meter>
+			</section>
+			<section>
+				<h2>ol的加强版</h2>
+				<ol start="2" type="a" reversed="reversed">
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+				</ol>
+			</section>
+			<section>
+				<h2>重新定义好的dl元素</h2>
+				<dl>
+					<dt>html</dt>
+					<dd>html是超文本标记语言</dd>
+					<dt>css</dt>	
+					<dd>css是层叠样式表</dd>
+				</dl>
+			</section>
+			<section>
+				<h2>Web storage 本地储存</h2>
+				<h3>临时储存</h3>
+				<p id="msg1"></p>
+				<input type="text" id="input1"/>
+				<input type="button" value="保存数据" onclick="saveStorage1('input1');" />
+				<input type="button" value="读取数据" onclick="loadStorage1('msg1');" />
+				<h3>永久储存</h3>
+				<p id="msg2"></p>
+				<input type="text" id="input2"/>
+				<input type="button" value="保存数据" onclick="saveStorage2('input2');" />
+				<input type="button" value="读取数据" onclick="loadStorage2('msg2');" />
+				<!--之前有定义好的js-->
+			</section>
+			<section>
+				<h2>图形的拖放</h2>
+				<!--1. 对象元素的draggable属性设置为true(draggable="ture").
+				还要注意的是a元素和img元素必须指定href。
+				2. 编写与拖放有关的事件处理代码。
+				事件 		产生事件的元素		描述
+				dragstart 	被拖放的元素 	开始拖放操作
+				drag 		被拖放元素 		拖放过程中
+				dragenter 	拖放过程中鼠标经过的元素 	被拖放的元素开始进入本元素的范围内
+				dragover 	拖放过程中鼠标经过的元素 	被拖放的元素正在本元素范围内移动
+				dragleave 	拖放过程中鼠标经过的元素 	被拖放的元素离开本元素的范围
+				drop 		拖放的目标元素 	其他元素被拖放到了本元素中
+				dragend 	拖放的目标元素 	拖放操作结束-->
+				<div id="tucun" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				<br />
+				<img src="文档结构和语义/img/tu1.png" id="tuotu" draggable="true" ondragstart="drag(event)" width="176" height="174"/>
+			</section>
 		</article>
 		<footer>
 			<p class="copyright">
