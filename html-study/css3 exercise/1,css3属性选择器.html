@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>css3属性选择器</title>
+		<style type="text/css">
+			/*1、选择所有的input标签
+			input{
+				background-color: #ffe4e1;
+			}*/
+			/*2、选择有class属性的input标签
+			input[class]{
+				background-color: #cd5c5c;
+			}*/
+			/*3、选择input标签中的class属性中带有first字符串的元素
+			input[class='first']{
+				background-color: #cd5c5c;
+			}*/
+			/* 4、选择所有带有class属性中带有first字符串的元素
+			 [class='first']{
+			 	background-color: #cd5c5c;
+			 }*/
+			/* 5、选择input的name属性以first开头的元素
+			 input[name^=first]{
+			 	background-color: #cd5c5c;
+			 }*/
+			 /*6、选择input的name属性以name结尾的元素
+			 input[name$=name]{
+			 	background-color: #cd5c5c;
+			 }*/
+			/* 7、选择input的name属性中包含stan字符串的元素*/
+			 input[name*=stna]{
+			 	background-color: #cd5c5c;
+			 }
+		</style>
+	</head>
+	<body>
+		<input type="text" name="firstname" id="" value="css3" class="first" /><br />
+		<input type="text" name="secondname" id="" value="" /><br />
+		<input type="text" name="lastname" id="" value="boom"  /><br />
+		<input type="text" name="firstcity" id="" value="beijing" class="second" />
+	</body>
+</html>

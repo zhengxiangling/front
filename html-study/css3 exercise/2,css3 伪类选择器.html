@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>css3伪类选择器</title>
+		<style type="text/css">
+			/*1、:root{}相当于html{},表示文档的根*/
+			:root{
+				border: 1px solid #000;
+			}
+			/*2、选择li的父元素（ul）的第一个子元素*/
+			/*li:first-child{
+				color: #AA5CAA;
+			}*/
+			/*3、选择li的父元素（ul）的最后一个子元素	*/
+			/*li:last-child{
+				color: darkred;
+			}*/
+			/*4、选择li的父元素（ul）的第二个子元素	*/
+			/*li:nth-child(2){
+				color: lightseagreen;
+			}*/
+			/*5、选择li的父元素（ul）的倒数二个子元素*/
+			/*li:nth-last-child(2){
+				color: indigo;
+			}	*/
+			/*6、选择不含任何内容的元素
+			E(标签):empty*/
+			/*7、匹配可用的元素*/
+			/*E:enabled*/
+			/*input:enabled{
+				color: #E54D26;
+			}*/
+		/*	8、匹配不可用的元素
+			E:disabled
+			input:disabled{
+				color: #CD5C5C;
+			}*/
+	/*		9、匹配选中的元素
+			E:checked
+			input:checked{
+				border: 3px solid #E54D26;
+			}
+			有问题*/
+					
+		</style>
+	</head>
+	<body>
+		<ul id="books">
+			<li>三国演义</li>
+			<li>水浒传</li>
+			<li>西游记</li>
+		</ul>
+		<ul class="games">
+			<li>网游</li>
+			<li>网页</li>
+			<li>单机</li>
+		</ul>
+		<ul class="color">
+			<li>blue</li>
+		</ul>
+		<input type="text" value="boom" />
+		<input type="text" value="saka" disabled="disabled"/>
+		<input type="checkbox" checked="checked" value="1"/>记住密码
+	</body>
+</html>

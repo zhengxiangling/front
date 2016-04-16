@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>圆角矩形</title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+				border: 1px solid crimson;
+				float: left;
+				margin: 20px;
+				text-align: center;
+			}
+			/*选择所有同种类型的div的第一个*/
+			div:first-of-type{
+				border-radius: 20px;/*四个角的半径全为20px;*/
+			}
+			/*选择所有同种类型的div的第二个*/
+			div:nth-of-type(2){
+				border-radius: 20px 40px;/*第一个表示上下 第二个表示左右*/
+			}
+			div:nth-of-type(3){
+				border-radius: 10px 30px 60px; /*第一个表示上 第二个表示左右 第三个表示下*/
+			}
+			div:nth-of-type(4){
+				border-radius: 20px 40px 60px 80px;
+			}
+			div:nth-of-type(5){
+				border-radius: 0px 0px 200px;/*扇形*/
+			}
+			div:last-of-type{
+				border-radius: 50%; /*或100px 正圆*/
+			}
+		</style>
+	</head>
+	<body>
+		<figure>
+			<div>border-radius: 20px</div>
+			<div>border-radius: 20px 40px</div>
+			<div>border-radius: 10px 30px 60px</div>
+			<div>20px 40px 60px 80px</div>
+			<div>border-radius: 0px 0px 200px-扇形</div>
+			<div>border-radius: 50%</div>
+			<figcaption>css3作圆角矩形	</figcaption>
+		</figure>
+	</body>
+</html>

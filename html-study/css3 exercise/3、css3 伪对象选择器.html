@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>css3伪对象选择器</title>
+		<style type="text/css">
+			/*:before 	在盒子内部的前面插入一个行显示的盒子
+			:after 		在盒子内部的后面插入一个行显示的盒子
+			注意 ： 这两个选择器必须和content一起使用，即时没有内容插入，也要写个空字符串。*/
+			.time:before{
+				content: '2016年';
+				width: 150px;
+				background-color: burlywood;
+				display: inline-block;
+			}
+			.time:after{
+				content: '16日';
+				width: 50px;
+				background-color: #CD5C5C;
+				display: inline-block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="time">4月</div>
+	</body>
+</html>
