@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>创建简单的3D场景</title>
+		<style type="text/css">
+			#experiment{
+				-webkit-perspective:400;/*至关测距离为400像素*/
+				-webkit-perspective-origin:50% 50%;/*设置x y轴的位置*/
+				-webkit-transform-style:-webkit-preserve-3d; /*告诉浏览器这是一个3D场景*/
+			  }
+			#block1{
+			  	width:500px;
+			  	height:500px;
+			  	background-color:blue;
+			  	margin:50px auto;
+			  	-webkit-transform:rotateX(10deg);
+			}
+			#block2{
+			  	width:500px;
+			  	height:500px;
+			  	background-color:blue;
+			  	margin:200px;
+			  	-webkit-transform:rotateY(30deg);
+			}
+			#block3{
+			  	width:500px;
+			  	height:500px;
+			  	background-color:blue;
+			  	margin:200px;
+			  	-webkit-transform:rotateZ(30deg);
+			}
+			/*1.还可以使用   	transition:translateX(x px);
+						transition:translateY(y px);
+						transition:translateZ(z px);对元素进行再X Y Z 轴的平移*/
+			/*2.使用transform-origin属性调整旋转中心
+			x轴				y轴 				z轴
+			 left 			 top 			 length px
+			 center 		 center
+			 right 			 bottom*/
+			</style>
+	</head>
+	<body>
+		<div id="experiment">
+			<div id="block1"></div>
+			<div id="block2"></div>
+			<div id="block3"></div>
+		</div>
+	</body>
+</html>
