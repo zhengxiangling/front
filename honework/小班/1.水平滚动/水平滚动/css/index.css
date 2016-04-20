@@ -1,0 +1,22 @@
+*{
+	padding: 0;
+	margin: 0px;  
+}
+.wrapper{
+	display: block;
+}
+.slider,.slider > ul{
+	display: block;
+	/* background-color: #dda111; */
+	list-style: none;
+}
+.slider> ul > li{
+	float: left;
+}
+.fixed{
+	position: fixed;
+}
+.clearfix{
+	background-color: #daa;
+	display: block;
+}

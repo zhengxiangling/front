@@ -1,0 +1,29 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.wrapper{
+	background-color: grey;
+	overflow: hidden;
+}
+.section,.section_wr{
+	list-style: none;
+}
+.section{
+	float: left;
+}
+.btn_lft{
+	width: 60px;
+	height: 60px;
+	position: fixed;
+	top:50%;
+	background-color: #ee1111;
+}
+.btn_rit{
+	width: 60px;
+	height: 60px;
+	position: fixed;
+	top:50%;
+	right: 0;
+	background-color: #ee1111;
+}
