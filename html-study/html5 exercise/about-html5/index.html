@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <link rel="stylesheet" type="text/css" href="stylesheets/css.css">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>HTML5</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>HTML5</h1>
+          <h2>学习</h2>
+        </header>
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/zhengxiangling/c-language" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+        	<h3>
+				<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>文档结构和语义
+			</h3>
+				<p>nav,header,section,article,aside,footer</p>
+			<h3>
+				<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1、兼容IE9以下的版本
+			</h3>
+
+			<p>/*Internet Explorer 8 及更早 IE 版本的浏览器不支持以上的方式。
+			但可以添加 -- 国内用户请使用百度静态资源库
+			<xmp><!--[if lt IE 9]><script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]--></xmp>
+			或者可以 <xmp><script>document.createElement("<header");</script>
+<style>	header{ display: block; }</style></xmp>
+			</p>
+
+			<h3>
+			<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2、header标签</h3>
+
+			<p>header标签在语法规范中包含标题、标题介绍或标题导航。
+			header不允许嵌套，不允许出现在地址（address）或页脚（footer）内。
+			*注：header应在CSS中被定义成display:block;其他结构性元素(article、footer等)也应如此。
+				 这样可以保证不兼容新标签的浏览器也能正确显示这些元素。
+				 其他HTML5新元素的编码都已经有通过JavaScript库的实现方案
+			 </p>
+
+			<h3>
+			<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3、hgroup</h3>
+
+			<p><xmp><hgroup>
+超过两个以上的h标签不再允许直接书写，将使用hgroup组织起来。
+hgroup的总体起始位置取决于首个标题出现的位置，一般只包含h1~h6标签。
+<h1>Welcome to HTML5</h1>
+h1元素在一个Web页面中原则上只能出现一次。
+<h2>Excitement!</h2>
+</hgroup>		
+				</xmp>
+			</p>
+
+			<h3>
+			<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4、aside</h3>
+
+			<p>aside元素作用于页面上一些与主题联系不大而相对独立的区域。
+			与article相对应：如果article是主干，则aside是分支。</p>
+
+			<h3>
+			<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4、section</h3>
+
+			<psection作用于同一主题下不同的文档部分，通常出现在附录、目录、许可协议等。
+			一般来说，有内容的表格中使用section也是允许的。</p>
+
+			<h3>
+			<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>5、label</h3>
+
+<p><xmp><label>Username <input name="user" type="text" size="10"></label><br><br>使用label将Username和后面的input包裹起来。以便区分。
+<label>Password <input name="pass" type="text" size="10"></label></xmp></p>
+
+<h3>
+<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>6、article</h3>
+
+<p><xmp>article对应Web页面中的一个独立区域，该区域包括新闻、博客文章之类的内容。
+如果article是相互嵌套的，原则上来说，内嵌article应该与外部article有着相同的主题样式。
+article用到display: block; 使内容宽度被缩减到环绕div的79%。
+<article>
+	<img src="文档结构和语义/img/3.png"/>
+	<h2>这里是article</h2>
+	<address>who you are</address>
+	<time pubdate="pubdate" datetime="2016-04-15">星期五</time>
+	<p><q>这是纯洁无暇的力量	</q>塔里克</p>
+</article>
+</xmp></p>
+
+<h3>7、address,time,q</h3>
+
+<p><xmp><address>Samuel H, Library of GXU</address>
+address包含联系信息（邮件地址、名字、公司、地址等相关信息），如果需要单独表达地址时用<p>。
+address作用于与其最近的article元素，若没有article元素则作用于整个文档。
+address默认为斜体显示。
+<time pubdate="pubdate" datetime="2016-02-25T19:45:00Z">Thursday, February 25th 2016 @19:45:00</time>			
+pubdate 属性指示 <time> 元素中的日期 / 时间是文档（或最近的前辈 <article> 元素）的发布日期。
+目前所有主流浏览器都不支持 <pubdate> 标签。
+datetime 属性规定日期或时间。在该元素的内容中未指定日期或时间时，使用该属性。
+目前所有主流浏览器都不支持 <datetime> 标签。
+time根据其pubdate、datetime属性，共同形成文档的时间戳。
+*注：time元素是方便供机器读取，而不是形成特殊的时间内容。
+	 Web页面显示的仍然time内自定义的内容。
+<p>This is the first HTML5 website that I made.</p>
+CSS中，p用到clear: both; 以消除img(float: left;)对其的影响。
+<p><q>This is perfect!</q>Says Nick.</p>
+引用部分用到q。英文引号标记"并非HTML语言的一部分。
+但配合CSS伪元素:before和:after，浏览器仍能为q元素生成合适的样式。</xmp></p>
+
+<h3>
+<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>8、figure</h3>
+
+<p><xmp>
+<figure>
+figure和figcaption不能算作结构性元素。
+figure用于组织图片，figcaption则用于对这一组图片的描述。
+每一个figure元素只能包括一个figcaption。
+figcaption的位置在figure内是任意的。
+但是在默认情况下，figcaption的大小与figure的大小一致。
+<img src="img/3.png" alt="Circle1">
+<img src="img/1.png" alt="Circle2">
+<img src="img/2.png" alt="Circle3">
+<figcaption>Bonne Nuit, The Monge!</figcaption>
+</figure>
+</xmp></p>
+
+<h3>
+<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>9、footer</h3>
+
+<p><xmp>
+<footer class="shadow">
+footer包含了许多信息，诸如作者、其他相关页面（friendlink）、注意事项（版权、免责声明）等。
+<p class="copyright">&copy; 2016 <mark>GXU</mark></p>
+一般版权用<p>写。
+mark用于高亮标记一段文字。
+<nav>
+*<h2>Navigation</h2>
+<div>
+<a href="about:blank" class="shadow">1</a>
+<a href="about:blank" class="shadow">2</a>
+<a href="about:blank" class="shadow">3</a>
+<a href="about:blank" class="shadow">4</a>
+</div>
+</nav>
+</footer></xmp></p>
+
+<h3>
+<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>9、大纲选择器</h3>
+
+<p><xmp>
+在aside和footer nav中都有一个隐藏的h2（*）。下面介绍大纲算法：
+HTML5大纲分析器会分析出下面的条目结构：
+1.Welcome to HTML5! 	(h1)
+	*1.Link Block		(h2)
+		1.Questionnare 	(h3)
+		2.Login 	(h3)
+		3.Quick Links 	(h3)
+	2.DELL 			(h2)
+	*3.Navigation 		(h2)
+
+由此，HTML5大纲分析器会按层次分析h标签内容。如果忽略Link Block和Navigation，
+则分析器会以Untitle Section替换。
+合理使用h1~h6标签，既可以保持结构完整，也可以使大纲清晰易读。
+要逐渐培养大纲思维，清晰划分Web页面结构。
+同时，需要注意的是，在使用hgroup时，大纲仅包含hgroup中的最高级别。
+目前还没有浏览器可以直接执行大纲算法，搜索引擎也没有改进机制。
+</xmp></p>
+
+<h3>
+<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>10、其他标签</h3>
+
+<p><xmp>
+<area shape="" coords="" href="" alt="" />
+<base href="" />
+<br />
+<col />
+<command />
+<embed src="" type="" />
+<hr />
+<img src=""/>
+<input type="" name="" id="" value="" />
+<keygen />
+<link rel="stylesheet" type="text/css" href=""/>
+<meta />
+<param name="" value="" />
+<source></source>
+<strong>重要</strong>
+<em>强调</em>
+<s>划掉错误文本</s>
+<cite>cite作品标题</cite>
+<small>small旁注</small>
+<q>q引用</q>
+<dfn>dfn举例</dfn>
+<abbr title="Chinese People's Liberation Army">CPLA</abbr>abbr缩写
+<code>printf</code>计算机代码
+<var>var变量</var>
+<samp>计算机输入</samp>
+<kbd>计算机输出</kbd>
+<sub>下标</sub>
+<sup>上标</sup>
+<bdi>文本方向隔离</bdi>
+<bdo dir="">文本方向格式</bdo>
+<span id="">
+	其他
+</span>
+</xmp></p>
+
+<h3>
+<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>11、表单</h3>
+
+<p><xmp>
+<article>
+	<h2>表单form</h2>
+<!--	form属性
+    <form action="" id="testform">          //form外的<input>不从属于form表单。 
+        <input type="text" name="" id="">   //在提交form表单时，form外的<input>也不会一并提交。
+    </form>                                 //但在HTML5提供form属性，指定id为testform，使外部<input>属于form表单范围。
+    <input form=testform> -->
+    	<section>
+    		<h3>表单属性</h3>
+    		<form action=""	id="testform">
+			<input type="text" name="" id="" value="" />
+			</form>
+			<input type="text" form=testform />
+			<!--placeholder属性
+        一般用在文本输入框上，
+        其主要作用是当文本框处于未输入状态并且内容为空时给出文本框的提示内容。
+        <input type="text" name="" id="" placeholder="请输入内容">-->
+   		    <input type="text" name="" id="" value="" placeholder="文本框未输入状态时给出的提示" />	
+       <!-- autofocus属性
+        指定控件自动获得焦点。*一个HTML页面上只能有一个控件具有该属性。
+        <input type="text" name="" id="" autofocus>-->
+   		    <input type="" name="" id="" value="" autofocus/>
+        <!--List属性和datalist元素
+        list属性允许在单行文本输入框中增加，通常和datalist结合使用。
+        list属性的主要作用是提示文本框输入，提示的数据源则由datalist元素提供。
+        目前list属性和datalist元素只有Opera浏览器支持。-->
+        <!--autocomplete属性
+        自动完成功能。可以对属性autocomplete指定两种值，“on”值表示开启自动完成输入。
+        “off”则表示禁止使用自动完成输入。只有Opera支持。-->
+       <!-- required属性
+        必填属性。required属性的元素时，如果该元素的值为空，则无法提交表单。
+        <input type="text" name="" id="" required>
+    *各个浏览器厂商所支持的属性都不一致，并不是所有的新属性都能在实际项目中应用。-->
+    		<input type="text" name="" id="" required>
+    	</section>
+		<section>
+			<h3>移动Web表单的input类型</h3>
+			<p>移动Web表单的input类型
+1、search类型文本是一种input元素，主要用于搜索关键词的文本框类型。 → 唯一区别就是外观。浏览器支持不好。
+2、email类型文本，可以指定电子邮件内容的文本框类型，通常用于输入E-mail地址的输入文本框上。 → iPhone提供键盘类型不同。
+3、number类型文本，用于输入数字的文本框类型。可以配合min/max及step属性使用。 → iPhone提供键盘类型不同。
+4、range类型文本，数值范围输入文本框，提供一种滑动输入方式，需要配合min/max/range等属性的使用。 → iOS和Android不支持。
+5、tel类型文本，供用户输入电话号码的文本框类型。 → iOS提供只有数字的键盘。
+6、url类型文本，输入url地址的文本框类型。 → iOS Safari浏览器下，提供网址输入法键盘。
+7、其他类型
+    datetime，日期和时间文本框（含时区）
+    datetime-local，日期和时间文本框（不含时区）
+    Time，时间选择器文本框
+    Date，日期选择器文本框
+    Week，年的周号选择器
+    Month，月份选择器</p>
+		</section>
+</article>
+<article>
+	<h2>new function</h2>
+	<section>
+		<h3>progress rest</h3>
+		<progress max="100" value="60"></progress>
+	</section>
+	<section>
+		<h2>meter 元素演示</h2>
+		<meter value="50" max="100" min="0" low="60" high="80" optimum="60"></meter>
+		<meter value="50" max="100" min="0" low="60" high="80" optimum="49"></meter>
+		<meter value="50" max="100" min="0" low="60" high="80" optimum="81"></meter>
+	</section>
+	<section>
+		<h2>ol的加强版</h2>
+		<ol start="2" type="a" reversed="reversed">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ol>
+	</section>
+	<section>
+		<h2>重新定义好的dl元素</h2>
+		<dl>
+			<dt>html</dt>
+			<dd>html是超文本标记语言</dd>
+			<dt>css</dt>	
+			<dd>css是层叠样式表</dd>
+		</dl>
+	</section>
+	<section>
+		<h2>Web storage 本地储存</h2>
+		<h3>临时储存</h3>
+		<p id="msg1"></p>
+		<input type="text" id="input1"/>
+		<input type="button" value="保存数据" onclick="saveStorage1('input1');" />
+		<input type="button" value="读取数据" onclick="loadStorage1('msg1');" />
+		<h3>永久储存</h3>
+		<p id="msg2"></p>
+		<input type="text" id="input2"/>
+		<input type="button" value="保存数据" onclick="saveStorage2('input2');" />
+		<input type="button" value="读取数据" onclick="loadStorage2('msg2');" />
+		<!--之前有定义好的js-->
+	</section>
+	<section>
+		<h2>图形的拖放</h2>
+		<!--1. 对象元素的draggable属性设置为true(draggable="ture").
+		还要注意的是a元素和img元素必须指定href。
+		2. 编写与拖放有关的事件处理代码。
+		事件 		产生事件的元素		描述
+		dragstart 	被拖放的元素 	开始拖放操作
+		drag 		被拖放元素 		拖放过程中
+		dragenter 	拖放过程中鼠标经过的元素 	被拖放的元素开始进入本元素的范围内
+		dragover 	拖放过程中鼠标经过的元素 	被拖放的元素正在本元素范围内移动
+		dragleave 	拖放过程中鼠标经过的元素 	被拖放的元素离开本元素的范围
+		drop 		拖放的目标元素 	其他元素被拖放到了本元素中
+		dragend 	拖放的目标元素 	拖放操作结束-->
+		<div id="tucun" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		<br />
+		<img src="文档结构和语义/img/tu1.png" id="tuotu" draggable="true" ondragstart="drag(event)" width="176" height="174"/>
+	</section>
+</article>
+</xmp></p>
+
+<h3>
+<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>aside</h3>
+        </section>
+
+        <footer>
+          <p>&copy 2xl-2016</p> 
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
