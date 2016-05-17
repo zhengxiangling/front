@@ -55,6 +55,8 @@ header .enter >p{
 	background-position: center;
 	-webkit-transition: 0.3s ease-in;
 	-moz-transition: 0.3s ease-in ;
+	-ms-transition: 0.3s ease-in;
+	-o-transition: 0.3s ease-in;
 	transition:  0.3s ease-in;
 
 }
@@ -68,6 +70,8 @@ header .enter >p{
 	background-position: center;
 	-webkit-transition: 0.3s ease-in;
 	-moz-transition: 0.3s ease-in ;
+	-ms-transition: 0.3s ease-in;
+	-o-transition: 0.3s ease-in;
 	transition:  0.3s ease-in;
 }
 .wrapper .mid:hover{
@@ -80,6 +84,8 @@ header .enter >p{
 	background-position: center;
 	-webkit-transition: 0.3s ease-in;
 	-moz-transition: 0.3s ease-in ;
+	-ms-transition: 0.3s ease-in;
+	-o-transition: 0.3s ease-in;
 	transition:  0.3s ease-in;
 }
 .wrapper .right:hover{
@@ -103,7 +109,7 @@ footer >.logo_2{
 }
 footer .copyright{
 
-	font-size: 0.2em;
+	font-size: 2em;
 	font-family: "宋体";
 	color: #ffffff;
 }
