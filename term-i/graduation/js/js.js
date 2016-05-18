@@ -4,9 +4,24 @@ $(document).ready(function(){
 			var $winHeight = $(window).height();
 			var $wrp = $(".wrapper");
 			$wrp.height($winHeight);
+			$wrp.width($winWidth);
 			/*$(window).resize(function(){
 				$winHeight = $(window).height();
 				$wrp.height($winHeight);
 			});*/
 
+			//窗口打开和关闭
+			$(".window").hide();
+			$(".left").click(function(){
+				$(".li_meet").fadeIn();
+			});
+			$(".mid").click(function(){
+				$(".li_meetagain").fadeIn();
+			});
+			$(".right").click(function(){
+				$(".li_future").fadeIn();
+			});
+			$(".back").click(function(){
+				$(this).parent().fadeOut(300);
+			});
 		})
