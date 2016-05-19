@@ -221,9 +221,6 @@ header .enter >a>p{
 	-o-display: flex;
 	justify-content: space-between;
 }
-.li_meetagain .content .content2{
-	margin-left: 90px;
-}
 .li_future{
 	position: absolute;
 	top: 0;
@@ -321,6 +318,12 @@ footer .copyright>p{
    	top: 53.2%;
    	background-color: #c3c0b3;
    }
+   .li_meetagain .content .content2{
+   	margin-left: 170px;
+   }
+   .li_future .content .content2{
+   	margin-left: 170px;
+   }
 }
 @media screen and (max-width: 1399px) {
    .left,.mid,.right{
@@ -344,5 +347,11 @@ footer .copyright>p{
    	left: 57.483%;
    	top: 53.2%;
    	background-color: #c3c0b3;
+   }
+   .li_meetagain .content .content2{
+   	margin-left: 90px;
+   }
+   .li_future .content .content2{
+   	margin-left: 80px;
    }
 }
