@@ -39,7 +39,7 @@
 #player .progress { 
 	width: 450px;
 	margin-left: 50px;
-	margin-top: -10px;	
+	margin-top: -12px;	
 }
 #player .progress .timer { font-size: 12px; color: #ccc; margin-top: 8px; float: right;margin-top: -10px; margin-right: -29px;}
 /* #player .progress .repeat, #player .progress .shuffle { background-position: center bottom; }
