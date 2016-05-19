@@ -1,0 +1,89 @@
+.control .left1 { float: left; margin-left: 100px; margin-top: 5px;}
+/* 	.right { float: right; } */
+#player {
+	width: 570px;
+	height: 70px;
+	position: absolute;
+	top: 79%;
+	left: 30%;
+	background-color: rgba(53,47,35,0.8); 
+	border-top-left-radius: 30px 15px;
+	border-top-right-radius: 30px 15px;
+}
+#player .icon { background-repeat: no-repeat; background-position: center; display: inline-block; opacity: 0.6; cursor: pointer; width: 24px; height: 24px; -moz-transition: 0.3s; -webkit-transition: 0.3s; -o-transition: 0.3s; transition: 0.3s; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; -o-user-select: none; user-select: none; }
+#player .icon:hover, #player .icon.enable { opacity: 1; }
+#player .icon:active { opacity: 0.3; }
+#player .control {
+	margin-top: 10px;
+	width: 300px;
+	position: absolute;
+	top: 10px;
+	left: 130px;
+}
+ #player .control .volume{
+	width: 30%;
+	/* float: left; */
+	position: absolute;
+	/* margin-left: 50px; */
+	right: 0;
+	margin-right: -70px;
+	margin-top: 4px;
+} 
+#player .control .rewind { background-image: url(../images/rewind.png); }
+#player .control .playback { background-image: url(../images/play.png); }
+#player .control .playback.playing { background-image: url(../images/pause.png); }
+#player .control .fastforward { background-image: url(../images/fastforward.png); }
+#player .control .volume .mute { background-image: url(../images/volume.png); float: left;}
+#player .control .volume .mute.enable { background-image: url(../images/mute.png); }
+#player .control .volume .slider { float: left; width: 50px; margin-top: 10px; }
+#player .progress { 
+	width: 450px;
+	margin-left: 50px;
+	margin-top: -10px;	
+}
+#player .progress .timer { font-size: 12px; color: #ccc; margin-top: 8px; float: right;margin-top: -10px; margin-right: -29px;}
+/* #player .progress .repeat, #player .progress .shuffle { background-position: center bottom; }
+#player .progress .repeat { background-image: url(../images/repeat.png); }
+#player .progress .repeat.once, #player .progress .repeat.all { opacity: 1; }
+#player .progress .repeat.once { position: relative; }
+#player .progress .repeat.once:before { content: "1"; position: absolute; top: 3px; right: -2px; font-size: 8px; } */
+/* #player .progress .shuffle { background-image: url(../images/shuffle.png); } */
+.slider { background: rgba(0, 0, 0, 0.3); height: 5px; position: relative; cursor: pointer; -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px; -ms-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px; -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) inset; -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) inset; -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) inset; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) inset; }
+.slider:hover a, .slider.enable a { opacity: 1; }
+.slider a { background: #fff; margin-left: -2.5px; position: absolute; opacity: 0; width: 5px; height: 5px; -moz-border-radius: 50%; -webkit-border-radius: 50%; -o-border-radius: 50%; -ms-border-radius: 50%; -khtml-border-radius: 50%; border-radius: 50%; -moz-transition: opacity 0.3s; -webkit-transition: opacity 0.3s; -o-transition: opacity 0.3s; transition: opacity 0.3s; }
+.slider .loaded, .slider .pace { position: absolute; height: 100%; opacity: 0.7; -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px; -ms-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px; }
+.slider .loaded { background: rgba(255, 255, 255, 0.1); }
+.slider .pace { background: #258fb8; }
+#playlist {
+	width: 30%;
+    /* margin: 0 auto; */
+    padding: 10px 15px;
+    list-style: none;
+    position: relative;
+    left: 50px;
+}
+#playlist li { color: #aaa; font-size: 12px; line-height: 2; padding-left: 25px; cursor: pointer; text-overflow: ellipsis; -moz-transition: 0.3s; -webkit-transition: 0.3s; -o-transition: 0.3s; transition: 0.3s; }
+#playlist li:hover { color: #fff; }
+#playlist li.playing { background: url(../images/playing.png) no-repeat 0 center;
+ color: #fff; font-weight: bold; }
+/* 播放器收起时 */
+.player_retract{
+	width: 80px;
+	height: 26px;
+	background-color: rgba(53,47,35,0.8); 
+	position: absolute;
+	top: 85%;
+	left: 47.5%;
+	border-top-left-radius: 5px;
+	border-top-right-radius:5px;
+	cursor: pointer;
+}
+/* 三角形 */
+.player_retract_fill{
+	width: 0;
+	height: 0;
+	border-left: 12px solid transparent;
+	border-right: 12px solid transparent;
+	border-bottom: 12px solid #ffffff;
+	margin: 6px auto;
+}

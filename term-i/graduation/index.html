@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>毕业专题</title>
 	<link rel="stylesheet" href="css/css.css">	
+	<link rel="stylesheet" href="css/stylesheets/style.css">
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/js.js"></script>
 </head>
@@ -63,16 +64,49 @@
 			</div>
 			<div class="back">返回<div>
 			</section>
+			<!-- 播放器 -->
+			<div class="player_retract">
+				<div class="player_retract_fill"></div>
+			</div>
+			<div id="player">
+					<ul id="playlist"></ul>
+					<div class="control hide">
+						<div class="left1">
+							<div class="rewind icon"></div>
+							<div class="playback icon"></div>
+							<div class="fastforward icon"></div>
+						</div>
+						<div class="volume">
+							<div class="mute icon"></div>
+							<div class="slider">
+								<div class="pace"></div>
+							</div>
+						</div>
+					</div>
+					<div class="progress hide">
+						<div class="slider">
+							<div class="loaded"></div>
+							<div class="pace"></div>
+						</div>
+						<div class="timer">0:00</div>
+						<div class="right1">
+							<div class="repeat icon"></div>
+							<div class="shuffle icon"></div>
+						</div>
+					</div>
+				</div>
 
 		<footer>
-			<div class="logo_2"></div>
+			<a href="" class="logo2"><div class="logo_2"></div></a>
 			<div class="copyright">
-				<br/><br/>
+				<br/>
 				<p>专题监制：黎禹君 唐龙隆 | 专题责任编辑：杨蓓茉 熊汉青 | 美术设计：赵璟 冯小铭 | 技术支持：胡剑武 郑相翎 韦小意 梁瑞雪
 			Copyright © 2000 - 2016 KONGGU.NET.ALL RIGHTS RESERVED.
 				空谷校园网版权所有  桂ICP备B2-20040022 </p>
 			</div>
 		</footer>
 	</div>
+	<script src="js/jquery-ui-1.8.17.custom.min.js"></script>
+	<script src="js/script.js"></script>
 </body>
 </html>
