@@ -238,17 +238,17 @@ ogg: ''
 })(jQuery);
 
 $(function(){
-	$(".player_retract").hide();
+	/*$(".player_retract").hide();*/
 	function music_hide(){
 		$("#player").fadeOut(1000,function(){
 			$(".player_retract").show();
 		});
 	}
 	var interval; //调度器对象。
-	interval=setInterval(music_hide,3000);
+	/*interval=setInterval(music_hide,3000);
 	$(".player_retract").mouseover(function(){
 		clearInterval(interval);
-	})
+	})*/
 	$(".player_retract").click(function(){
 		$(this).hide();
 		$("#player").fadeIn();
