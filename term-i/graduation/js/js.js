@@ -5,11 +5,13 @@ $(document).ready(function(){
 			var $wrp = $(".wrapper");
 			$wrp.height($winHeight);
 			$wrp.width($winWidth);
-			/*$(window).resize(function(){
-				$winHeight = $(window).height();
-				$wrp.height($winHeight);
-			});*/
-
+			// 手机版
+			if ($winWidth<=375) {
+				$(".pc").empty();
+			}else{
+				$(".phone").empty();
+			}
+			;
 			//窗口打开和关闭
 			$(".window").hide();
 			$(".left").click(function(){
@@ -24,4 +26,13 @@ $(document).ready(function(){
 			$(".back").click(function(){
 				$(this).parent().fadeOut(300);
 			});
+			$(".i-player").toggle(fun1,fun2);
+			function fun1(){
+				// audio.pause();
+				$(".i-player").css("background-image","url(img/i-player2.png)")
+			}
+			function fun2(){
+				// audio.play();
+				$(".i-player").css("background-image","url(img/i-player1.png)")
+			}
 		})

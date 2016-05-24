@@ -6,19 +6,19 @@
 		autoplay = true,
 		playlist = [
 		{
-title: '进行曲',
-artist: '德国',
+title: '',
+artist: 'Town of Windmill',
 album: '进行曲.mp3',
 cover:'img/1.jpg',
-mp3: 'mp3/deguo.mp3',
+mp3: 'mp3/A_Hisa - Town of Windmill.mp3',
 ogg: ''
 },
 {
 title: '',
-artist: 'Hello',
+artist: 'Sad Angel',
 album: ' .mp3',
 cover: 'img/2.jpg',
-mp3: 'mp3/Hello.mp3',
+mp3: 'mp3/Igor Krutoi - Sad Angel.mp3',
 ogg: ''
 },
 /*{

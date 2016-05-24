@@ -1,0 +1,143 @@
+/*iphone6*/
+@media screen and (max-width: 375px) {
+	.i-wrapper{
+		width: 375px;
+		height: 1195px;
+	}
+	.i-header{
+		height: 184px;
+		width: 375px;
+	    background-image: url(../img/i-banner.jpg);
+	}
+	.i-content{
+		height: 907px;
+		width: 375px;
+	}
+	.i-cxs{
+		width: 375px;
+		height: 258px;
+		background-color: #b5ae9b;
+	}
+	.i-cxs div{
+		width: 148px;
+		height: 72px;
+		background-image: url(../img/i-cxs.png);
+		float: left;
+		margin-top: 9px;
+		margin-left: 112px;
+	}
+	.i-cxs ul{
+		width: 375px;
+		height: 136px;
+		float: left;
+		margin-top: 20px;
+		list-style: none;
+	}
+	.i-cxs ul li{
+		width: 375px;
+		height: 34px;
+		float: left;
+	}
+	.i-cxs ul li:hover{
+		background-color: #5a574d;
+	}
+	.i-zyj{
+		width: 375px;
+		height: 300px;
+		background-color: #f3ead6;
+	}
+	.i-zyj div{
+		width: 150px;
+		height: 65px;
+		float: left;
+		background-image: url(../img/i-zyj.png);
+		margin-top: 8px;
+		margin-left: 111px;
+	}
+	.i-zyj ul{
+		width: 375px;
+		height: 180px;
+		float: left;
+		margin-top: 15px;
+		list-style: none;
+	}
+	.i-zyj ul li{
+		width: 375px;
+		height: 30px;
+		float: left;
+	}
+	.i-zyj ul li:hover{
+		background-color: #b5ae9b;
+	}
+	.i-jwl{
+		width: 375px;
+		height: 349px;
+		background-color: #b5ae9b;
+	}
+	.i-jwl div{
+		width: 150px;
+		height: 67px;
+		float: left;
+		background-image: url(../img/i-jwl.png);
+		margin-top: 15px;
+		margin-left: 114px;
+	}
+	.i-jwl ul{
+		width: 375px;
+		height: 210px;
+		float: left;
+		margin-top: 24px;
+		list-style: none;
+	}
+	.i-jwl ul li{
+		width: 375px;
+		height: 30px;
+		float: left;
+	}
+	.i-jwl ul li:hover{
+		background-color: #5a574d;
+	}
+	.i-content a{
+		float: left;
+		font-size: 14px;
+		font-family: "微软雅黑";
+		margin-left: 117px;
+	}
+	.i-cxs a{
+		margin-top: 6px;
+	}
+	.i-zyj a{
+		color: #5a574d;
+		margin-top: 5px;
+	}
+	.i-zyj a:hover{
+		color: white;
+	}
+	.i-jwl a{
+		margin-top: 5px;
+	}
+	.i-footer{
+		width: 375px;
+		height: 104px;
+		background-color: #2b2b2b;
+	}
+	.i-player{
+		width: 33px;
+		height: 33px;
+		border-radius: 50%;
+		background-image: url(../img/i-player1.png);
+		position: fixed;
+		top: 8px;
+		right: 13px;
+		cursor: pointer;
+	}
+	.i-logo{
+		display: block;
+		width: 173px;
+		height: 69px;
+		margin-top: 19px;
+		margin-left: 92px;
+		background-image: url(../img/i-logo.png);
+		float: left;
+	}
+}
