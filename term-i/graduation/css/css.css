@@ -348,7 +348,7 @@ footer .copyright>p{
    	margin-left: 170px;
    }
 }
-@media screen and (min-width: 1024px) and (max-width: 1399px) {
+@media screen and (max-width: 1399px) {
    .left,.mid,.right{
    	width: 5.427%;
    	height: 20.3%;

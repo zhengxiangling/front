@@ -1,5 +1,5 @@
 /*iphone6*/
-@media screen and (max-width: 375px) {
+@media (max-width: 375px) {
 	.i-wrapper{
 		width: 375px;
 		height: 1195px;

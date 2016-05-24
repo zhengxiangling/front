@@ -6,16 +6,16 @@
 		autoplay = true,
 		playlist = [
 		{
-title: '',
-artist: 'Town of Windmill',
+title: 'Town of Windmill',
+artist: 'A_Hisa',
 album: '进行曲.mp3',
 cover:'img/1.jpg',
 mp3: 'mp3/A_Hisa - Town of Windmill.mp3',
 ogg: ''
 },
 {
-title: '',
-artist: 'Sad Angel',
+title: 'Sad Angel',
+artist: 'Igor Krutoi',
 album: ' .mp3',
 cover: 'img/2.jpg',
 mp3: 'mp3/Igor Krutoi - Sad Angel.mp3',
