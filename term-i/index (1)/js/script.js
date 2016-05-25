@@ -12,15 +12,15 @@
 		playlist = [
 		{
 title: 'Town of Windmill',
-artist: 'A_Hisa',
-album: '进行曲.mp3',
+artist: '',
+album: '.mp3',
 cover:'img/1.jpg',
 mp3: 'mp3/A_Hisa - Town of Windmill.mp3',
 ogg: ''
 },
 {
 title: 'Sad Angel',
-artist: 'Igor Krutoi',
+artist: '',
 album: ' .mp3',
 cover: 'img/2.jpg',
 mp3: 'mp3/Igor Krutoi - Sad Angel.mp3',

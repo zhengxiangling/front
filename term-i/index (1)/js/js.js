@@ -4,14 +4,14 @@ $(document).ready(function(){
 			var $winHeight = $(window).height();
 			var $wrp = $(".wrapper");
 			$wrp.height($winHeight);
-			$wrp.width($winWidth);
-			// 手机版
-			// if ($winWidth<=390) {
-			// 	$(".pc").empty();
-			// }else{
-			// 	$(".phone").empty();
-			// }
-			// ;
+			/*$wrp.width($winWidth);*/
+			 //手机版
+			 if ($winWidth<=375) {
+			 	$(".wrapper").empty();
+			 }else{
+			 	$(".phone").empty();
+			 }
+			 ;
 			//窗口打开和关闭
 			$(".window").hide();
 			$(".left").click(function(){
