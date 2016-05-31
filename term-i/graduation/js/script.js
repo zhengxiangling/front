@@ -1,4 +1,9 @@
-﻿(function($){
+﻿$(document).ready(function(){
+	var $winWidth = $(window).width();
+	if ($winWidth<=767) {
+		return;
+	}else{
+		(function($){
 	// Settings
 	var repeat = localStorage.repeat || 0,
 		shuffle = localStorage.shuffle || 'false',
@@ -6,8 +11,8 @@
 		autoplay = true,
 		playlist = [
 		{
-title: 'Town of Windmill',
-artist: 'A_Hisa',
+title: '镇上的风车',
+artist: '',
 album: '进行曲.mp3',
 cover:'img/1.jpg',
 mp3: 'mp3/A_Hisa - Town of Windmill.mp3',
@@ -15,7 +20,7 @@ ogg: ''
 },
 {
 title: 'Sad Angel',
-artist: 'Igor Krutoi',
+artist: '',
 album: ' .mp3',
 cover: 'img/2.jpg',
 mp3: 'mp3/Igor Krutoi - Sad Angel.mp3',
@@ -258,3 +263,5 @@ $(function(){
 		$(".player_retract").fadeIn(300);
 	});
 });
+	};
+})

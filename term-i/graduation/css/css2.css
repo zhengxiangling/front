@@ -1,8 +1,12 @@
 /*iphone6*/
-@media (max-width: 375px) {
+@media (max-device-width: 414px) ,  (max-width:414px) {
+	.pc{
+		display: none;
+	}
 	.i-wrapper{
 		width: 375px;
 		height: 1195px;
+		margin:0 auto;
 	}
 	.i-header{
 		height: 184px;
@@ -120,16 +124,6 @@
 		width: 375px;
 		height: 104px;
 		background-color: #2b2b2b;
-	}
-	.i-player{
-		width: 33px;
-		height: 33px;
-		border-radius: 50%;
-		background-image: url(../img/i-player1.png);
-		position: fixed;
-		top: 8px;
-		right: 13px;
-		cursor: pointer;
 	}
 	.i-logo{
 		display: block;

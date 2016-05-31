@@ -1,17 +1,10 @@
 $(document).ready(function(){
 			//屏幕高度自适应
-			var $winWidth = $(window).width();
+			/*var $winWidth = $(window).width();*/
 			var $winHeight = $(window).height();
 			var $wrp = $(".wrapper");
 			$wrp.height($winHeight);
-			$wrp.width($winWidth);
-			// 手机版
-			if ($winWidth<=375) {
-				$(".pc").empty();
-			}else{
-				$(".phone").empty();
-			}
-			;
+			/*$wrp.width($winWidth);*/
 			//窗口打开和关闭
 			$(".window").hide();
 			$(".left").click(function(){
@@ -26,13 +19,4 @@ $(document).ready(function(){
 			$(".back").click(function(){
 				$(this).parent().fadeOut(300);
 			});
-			$(".i-player").toggle(fun1,fun2);
-			function fun1(){
-				// audio.pause();
-				$(".i-player").css("background-image","url(img/i-player2.png)")
-			}
-			function fun2(){
-				// audio.play();
-				$(".i-player").css("background-image","url(img/i-player1.png)")
-			}
 		})
